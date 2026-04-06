@@ -46,7 +46,7 @@ export default function Page() {
             alt="Screenshot of the dashboard project showing mobile version"
           />
         </div>
-      </div>
+      </div> 
     </main>
   );
 }
