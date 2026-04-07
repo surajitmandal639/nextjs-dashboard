@@ -144,4 +144,4 @@ const revenue = [
   { month: 'Dec', revenue: 4800 },
 ];
 
-export { users, revenue };
+export { users, invoices, customers, revenue };

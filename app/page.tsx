@@ -138,8 +138,7 @@ export default function Portfolio() {
   )
 }
 
-
-function SkillIcon({ icon, name }) {
+function SkillIcon({ icon, name }: { icon: any; name: string }) {
   return (
     <div className="flex flex-col items-center gap-2 hover:text-blue-600 transition-colors cursor-default group">
       <FontAwesomeIcon icon={icon} className="text-5xl group-hover:scale-110 transition-transform" />
@@ -149,7 +148,7 @@ function SkillIcon({ icon, name }) {
 }
 
 
-function ContactMethod({ icon, label, value }) {
+function ContactMethod({ icon, label, value }: { icon: any; label: any; value:any }) {
   return (
     <div className="flex items-center gap-4 p-4 rounded-2xl border border-slate-50 dark:border-slate-800/50 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors">
       <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600">
