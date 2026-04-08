@@ -55,6 +55,23 @@ export async function sendEmailAction(formData: FormData) {
       `,
     });
 
+    // ৩. ইউজারকে একটি ওয়েলকাম রিপ্লাই পাঠানো
+    await transporter.sendMail({
+      from: `"Surajit Mandal" <${process.env.EMAIL_USER}>`, // আপনার নাম ও ইমেইল
+      to: email as string, // ইউজারের ইমেইল (যিনি কন্টাক্ট করেছেন)
+      subject: "Thanks for reaching out!",
+      text: `Hi ${name}, thank you for contacting me. I have received your message and will get back to you soon!`,
+      html: `
+        <div style="font-family: sans-serif; line-height: 1.5;">
+          <h2>Hello ${name}! 👋</h2>
+          <p>Thank you for reaching out to me through my portfolio. I've received your message and I'm excited to connect with you!</p>
+          <p>I usually respond within 24 hours. In the meantime, feel free to check out my latest projects.</p>
+          <br />
+          <p>Best Regards,<br /><strong>Surajit Mandal</strong></p>
+        </div>
+      `,
+    });
+    
     return { message: 'Success' };
   } catch (error) {
     console.error('Email Error:', error);
