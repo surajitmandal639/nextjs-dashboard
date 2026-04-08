@@ -1,3 +1,8 @@
+
+export const metadata = {
+  title: 'Dashboard', // এই 'Dashboard' লেখাটিই %s এর জায়গায় বসবে
+};
+
 export default async function Dashboard() {
   const res = await fetch('http://localhost:3000/query', {
     cache: 'no-store',

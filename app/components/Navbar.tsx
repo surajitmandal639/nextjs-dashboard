@@ -3,8 +3,12 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import ThemeToggle from './ThemeToggle'; // একই ফোল্ডারে থাকলে সরাসরি ইমপোর্ট
+import PrintButton from './PrintButton';
+import { useLang } from '../context/LangContext';
+import LangSwitchButton from './LangSwitchButton';
 
 export default function Navbar() {
+
   return (
     <nav className="fixed w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -25,6 +29,7 @@ export default function Navbar() {
           
           {/* Dark Mode Switcher */}
           <ThemeToggle />
+          <LangSwitchButton />
         </div>
       </div>
     </nav>
